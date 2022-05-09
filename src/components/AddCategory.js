@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 
 
-const AddCategory = ({ setCategories }) => {
+const AddCategory = ({ setCategoriesFunc }) => {
 
     const [inputValue, setInputValue] = useState('');
 
@@ -14,7 +14,12 @@ const AddCategory = ({ setCategories }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (inputValue.trim().length > 2) {
-            setCategories((cats) => [inputValue, ...cats]);
+            if (inputValue.substring(0, 4) === 'NEW:') {
+                setCategoriesFunc((cats) => [inputValue.substring(4).trim()]);
+            } else {
+                setCategoriesFunc((cats) => [inputValue, ...cats]);
+            }
+
             setInputValue('');
         }
     }
