@@ -37,7 +37,7 @@ const AddCategory = ({ setCategoriesFunc }) => {
 }
 
 AddCategory.propTypes = {
-    setCategories: PropTypes.func.isRequired
+    setCategoriesFunc: PropTypes.func.isRequired
 }
 
 

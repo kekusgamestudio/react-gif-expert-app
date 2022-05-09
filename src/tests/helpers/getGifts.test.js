@@ -4,7 +4,7 @@ import { getGifs } from "../../helpers/getGifs"
 describe('Pruebas con getGifs Fetch', () => {
 
     test('Debería traer 10 elementos', async () => {
-        const gifts = await getGifs('Sos groso');
+        const gifts = await getGifs('Hello');
         expect(gifts.length).toBe(10);
     })
 
