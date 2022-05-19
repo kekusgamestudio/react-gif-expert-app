@@ -12,6 +12,18 @@ input {
   width: 100%;
 }
 
+p.help {
+  color: gray;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+p.loading {
+  color: rgb(25, 0, 248);
+  font-size: 2rem;
+  width: 100%;
+}
+
 .card-grid {
   display: flex;
   flex-direction: row;
